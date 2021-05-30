@@ -16,4 +16,42 @@ class Solution:
 
         # ===============
 
+class Solution:
+    def balancedStringSplit(self, s: str) -> int:
         
+        newList = []
+        newStr = ""
+        count = 0
+
+        for i in s:
+            if i == "L":
+                count -= 1
+                newStr += i
+            else:
+                count += 1
+                newStr += i
+
+            if count == 0:
+                newList.append(newStr)
+                newStr = ""         
+
+        return len(newList)
+                
+                
+                
+        
+        
+'''
+
+U:
+
+["RLRLRLRL"]
+output = 4
+
+["RLLRLLRLRL"]
+output = 3
+
+'''        
+
+# ===============
+
