@@ -84,3 +84,15 @@ class ParkingSystem:
 # param_1 = obj.addCar(carType)
 
 # ===============
+
+class Solution:
+    def decode(self, encoded: List[int], first: int) -> List[int]:
+        
+        newList = []
+        
+        newList.append(first)
+        
+        for i in range(len(encoded)):
+            newList.append(encoded[i]^newList[i])
+                           
+        return newList
