@@ -96,3 +96,22 @@ class Solution:
             newList.append(encoded[i]^newList[i])
                            
         return newList
+
+# ===============
+
+class Solution:
+    def checkIfPangram(self, sentence: str) -> bool:
+        
+        alpha = []
+        
+        for i in sentence:
+            if i not in alpha:
+                alpha.append(i)
+                
+        if len(alpha) == 26:
+            return True
+        else:
+            return False
+
+# ===============
+
